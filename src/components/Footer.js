@@ -1,7 +1,17 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { GitHubIcon, GoodReadsIcon, LinkedInIcon, StackOverflowIcon, TwitterIcon, UpworkIcon } from './Icons';
 
 export default function Footer() {
+  const socialLinks = [
+    { to: 'https://twitter.com/jakubro', as: TwitterIcon },
+    { to: 'https://www.upwork.com/fl/jakubroman', as: UpworkIcon },
+    { to: 'https://stackoverflow.com/users/420552', as: StackOverflowIcon },
+    { to: 'https://github.com/jakubro', as: GitHubIcon },
+    { to: 'https://www.goodreads.com/user/show/45469521-jakub', as: GoodReadsIcon },
+    { to: 'https://www.linkedin.com/in/jakubroman', as: LinkedInIcon },
+  ];
+
   return (
     <footer className='mw7-ns center-ns pv4 ph4-s black-70 bt b--black-10'>
       {/*<section className='cf mb5'>
@@ -20,24 +30,13 @@ export default function Footer() {
           </p>
         </div>
         <div className='db dtc-ns black-70 tc tr-ns v-mid'>
-          <a href='https://twitter.com/jakubro' className='link dim dib mr3 black-70'>
-            <TwitterIcon className='db w2 h2' />
-          </a>
-          <a href='https://www.upwork.com/fl/jakubroman' className='link dim dib mr3 black-70'>
-            <UpworkIcon className='db w2 h2' />
-          </a>
-          <a href='https://stackoverflow.com/users/420552' className='link dim dib mr3 black-70'>
-            <StackOverflowIcon className='db w2 h2' />
-          </a>
-          <a href='https://github.com/jakubro' className='link dim dib mr3 black-70'>
-            <GitHubIcon className='db w2 h2' />
-          </a>
-          <a href='https://www.goodreads.com/user/show/45469521-jakub' className='link dim dib mr3 black-70'>
-            <GoodReadsIcon className='db w2 h2' />
-          </a>
-          <a href='https://www.linkedin.com/in/jakubroman' className='link dim dib black-70'>
-            <LinkedInIcon className='db w2 h2' />
-          </a>
+          {socialLinks.map((props, i) => (
+            <FooterSocialLink
+              {...props}
+              key={i}
+              className={i + 1 < socialLinks.length ? 'mr3' : null}
+            />
+          ))}
         </div>
       </div>
       <div className='db dn-ns'>
@@ -48,3 +47,17 @@ export default function Footer() {
     </footer>
   );
 }
+
+function FooterSocialLink({ className, as: Component, to }) {
+  return (
+    <a href={to} className={`link dim dib black-70 ${className}`}>
+      <Component className='db w2 h2' />
+    </a>
+  );
+}
+
+FooterSocialLink.propTypes = {
+  className: PropTypes.string,
+  as: PropTypes.any,
+  to: PropTypes.string,
+};
