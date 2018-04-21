@@ -1,0 +1,21 @@
+root: true
+env:
+  browser: true
+  es6: true
+plugins:
+  - react
+globals:
+  graphql: false
+  process: false
+parser: babel-eslint
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+settings:
+  propWrapperFunctions:
+    - forbidExtraProps

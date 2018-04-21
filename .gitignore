@@ -1,0 +1,8 @@
+node_modules/
+public/
+
+.cache/
+.gatsby-context.js
+.intermediate-representation/
+
+npm-debug.log*
