@@ -9,7 +9,8 @@ export default function Header() {
         <img src={profilePicture} className='br-100 pa1 ba b--black-10 h3 w3' alt='Jakub Roman' />
       </Link>
       <h1 className='f2 fw9 black-80'>Jakub Roman</h1>
-      <h2 className='f6 gray fw2 ttu tracked'>Tech enthusiast. Coffee addict. Cat person. Read a lot. Concise.</h2>
+      <h2 className='f6 gray fw2-ns fw3 ttu tracked'>Tech enthusiast. Coffee addict. Cat person. Read a lot.
+        Concise.</h2>
       {/*<nav className='bt bb tc mw7 center mt4'>
         <Link to='/' className='f6 f5-l dib pa3 ph4-l link dim black-90'>Home</Link>
         <Link to='/portfolio' className='f6 f5-l dib pa3 ph4-l link dim black-90'>Portfolio</Link>
