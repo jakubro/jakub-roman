@@ -12,8 +12,7 @@ export default class BlogIndex extends React.Component {
 
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    let posts = get(this, 'props.data.allMarkdownRemark.edges');
-    posts = posts.filter(({ node }) => node.frontmatter.type !== 'page'); // todo: do this in graphql
+    const posts = get(this, 'props.data.allMarkdownRemark.edges') || [];
 
     return (
       <div className='mw7-ns center-ns'>
@@ -43,7 +42,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {type: {ne: "page"}}}) {
       edges {
         node {
           excerpt
