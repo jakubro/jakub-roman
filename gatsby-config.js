@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jakub Roman',
     author: 'Jakub Roman',
-    description: '',
+    description: 'Tech enthusiast. Coffee addict. Cat person. Read a lot. Concise.',
     siteUrl: 'https://jakubroman.com/',
   },
   pathPrefix: '/',
