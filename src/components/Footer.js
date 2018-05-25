@@ -5,11 +5,11 @@ import { GitHubIcon, GoodReadsIcon, LinkedInIcon, StackOverflowIcon, TwitterIcon
 export default function Footer() {
   const socialLinks = [
     { to: 'https://twitter.com/jakubro', as: TwitterIcon },
-    { to: 'https://www.linkedin.com/in/jakubroman', as: LinkedInIcon },
     { to: 'https://github.com/jakubro', as: GitHubIcon },
     { to: 'https://stackoverflow.com/users/420552', as: StackOverflowIcon },
     { to: 'https://www.upwork.com/fl/jakubroman', as: UpworkIcon },
     { to: 'https://www.goodreads.com/user/show/45469521-jakub', as: GoodReadsIcon },
+    { to: 'https://www.linkedin.com/in/jakubroman', as: LinkedInIcon },
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function Footer() {
             <FooterSocialLink
               {...props}
               key={i}
-              className={i + 1 < socialLinks.length ? 'mr3' : null}
+              className={i + 1 < socialLinks.length ? 'mr3' : ''}
             />
           ))}
         </div>
