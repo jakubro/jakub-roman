@@ -5,7 +5,7 @@
   "author": "Jakub Roman",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop -p 8086",
     "build": "gatsby build"
   },
   "dependencies": {

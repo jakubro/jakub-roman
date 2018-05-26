@@ -15,22 +15,22 @@ export default class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges') || [];
 
     return (
-      <div className='mw7-ns center-ns'>
-        <Helmet title={siteTitle} />
-        {posts.length > 0 && (
-          <ArticleList>
-            {posts.map(({ node }) => (
-              <ArticleListItem
-                key={node.fields.slug}
-                slug={node.fields.slug}
-                title={node.frontmatter.title || node.fields.slug}
-                date={node.frontmatter.date}
-                excerpt={node.excerpt}
-              />
-            ))}
-          </ArticleList>
-        )}
-      </div>
+        <div className='mw7-ns center-ns'>
+          <Helmet title={siteTitle}/>
+          {posts.length > 0 && (
+              <ArticleList>
+                {posts.map(({node}) => (
+                    <ArticleListItem
+                        key={node.fields.slug}
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title || node.fields.slug}
+                        date={node.frontmatter.date}
+                        excerpt={node.excerpt}
+                    />
+                ))}
+              </ArticleList>
+          )}
+        </div>
     );
   }
 }

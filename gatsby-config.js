@@ -1,10 +1,12 @@
 /* eslint-env node */
 
+const config = require('./data/config');
+
 module.exports = {
   siteMetadata: {
-    title: 'Jakub Roman',
-    author: 'Jakub Roman',
-    description: 'Tech enthusiast. Coffee addict. Cat person. Avid reader. Concise.',
+    title: config.siteTitle,
+    author: config.siteAuthor,
+    description: config.siteDescription,
     siteUrl: 'https://jakubroman.com/',
   },
   pathPrefix: '/',

@@ -3,7 +3,7 @@ env:
   browser: true
   es6: true
 plugins:
-  - react
+- react
 globals:
   graphql: false
   process: false
@@ -14,8 +14,8 @@ parserOptions:
     experimentalObjectRestSpread: true
     jsx: true
 extends:
-  - eslint:recommended
-  - plugin:react/recommended
+- eslint:recommended
+- plugin:react/recommended
 settings:
   propWrapperFunctions:
-    - forbidExtraProps
+  - forbidExtraProps
