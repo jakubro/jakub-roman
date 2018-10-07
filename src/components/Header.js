@@ -10,7 +10,7 @@ export default function Header() {
       </Link>
       <h1 className='f2 fw9 black-80'>Jakub Roman</h1>
       <h2 className='f6 gray fw2-ns fw3 ttu tracked'>
-        Tech enthusiast. Coffee addict. Cat person. Read a lot. Concise.
+        Tech enthusiast. Coffee addict. Cat person. Avid reader. Concise.
       </h2>
       {/*<nav className='bt bb tc mw7 center mt4'>
         <Link to='/' className='f6 f5-l dib pa3 ph4-l link dim black-90'>Home</Link>
