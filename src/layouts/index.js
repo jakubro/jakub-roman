@@ -14,7 +14,7 @@ export default class Template extends React.Component {
     return (
       <div className='avenir'>
         <Helmet>
-          <meta name="description" content='Tech enthusiast. Coffee addict. Cat person. Read a lot. Concise.' />
+          <meta name="description" content='Tech enthusiast. Coffee addict. Cat person. Avid reader. Concise.' />
         </Helmet>
         <Header />
         {this.props.children()}
