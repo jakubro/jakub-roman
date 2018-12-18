@@ -10,7 +10,7 @@ export default function Header() {
           <img src={profilePicture} className='br-100 pa1 ba b--black-10 h3 w3' alt={config.siteAuthor}/>
         </Link>
         <h1 className='f2 fw9 black-80'>{config.siteTitle}</h1>
-        <h2 className='f6 mid-gray fw2-ns fw3 ttu tracked'>{config.siteDescription}</h2>
+        <h2 className='f6 black-70 fw2-ns fw3 ttu tracked'>{config.siteDescription}</h2>
         {/*<nav className='bt bb tc mw7 center mt4'>
         <Link to='/' className='f6 f5-l dib pa3 ph4-l link dim black-90'>Home</Link>
         <Link to='/portfolio' className='f6 f5-l dib pa3 ph4-l link dim black-90'>Portfolio</Link>
