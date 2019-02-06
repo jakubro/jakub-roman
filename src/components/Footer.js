@@ -27,7 +27,7 @@ export default function Footer() {
         <div className='dt dt--fixed w-100'>
           <div className='dn dtc-ns v-mid'>
             <p className='f7 black-70 dib pr3 mb3'>
-              © 2018 {config.siteAuthor}
+              © 2012 - {(new Date()).getFullYear()} {config.siteAuthor}
             </p>
           </div>
           <div className='db dtc-ns black-70 tc tr-ns v-mid'>
