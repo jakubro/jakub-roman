@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div className='db dn-ns'>
           <p className='f7 black-70 mt4 tc'>
-            © 2018 {config.siteAuthor}
+            © 2012 - {(new Date()).getFullYear()} {config.siteAuthor}
           </p>
         </div>
       </footer>
