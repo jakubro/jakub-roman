@@ -5,12 +5,12 @@ import config from '../../data/config';
 
 export default function Footer() {
   const socialLinks = [
-    {to: 'https://twitter.com/jakubro', as: TwitterIcon},
-    {to: 'https://github.com/jakubro', as: GitHubIcon},
-    {to: 'https://stackoverflow.com/users/420552', as: StackOverflowIcon},
-    {to: 'https://www.goodreads.com/jakubro', as: GoodReadsIcon},
-    {to: 'https://www.upwork.com/fl/jakubroman', as: UpworkIcon},
-    {to: 'https://www.linkedin.com/in/jakubroman', as: LinkedInIcon},
+    {to: 'https://twitter.com/jakubro', as: TwitterIcon, ariaLabel: 'Twitter'},
+    {to: 'https://github.com/jakubro', as: GitHubIcon, ariaLabel: 'GitHub'},
+    {to: 'https://stackoverflow.com/users/420552', as: StackOverflowIcon, ariaLabel: 'Stack Overflow'},
+    {to: 'https://www.goodreads.com/jakubro', as: GoodReadsIcon, ariaLabel: 'Goodreads'},
+    {to: 'https://www.upwork.com/fl/jakubroman', as: UpworkIcon, ariaLabel: 'Upwork'},
+    {to: 'https://www.linkedin.com/in/jakubroman', as: LinkedInIcon, ariaLabel: 'LinkedIn'},
   ];
 
   return (
@@ -49,9 +49,9 @@ export default function Footer() {
   );
 }
 
-function FooterSocialLink({className, as: Component, to}) {
+function FooterSocialLink({className, as: Component, to, ariaLabel}) {
   return (
-      <a href={to} className={`link dim dib black-70 ${className}`}>
+      <a href={to} aria-label={ariaLabel} className={`link dim dib black-70 ${className}`}>
         <Component className='db w2 h2'/>
       </a>
   );
