@@ -10,7 +10,6 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js');
     resolve(
         graphql(
             `
@@ -22,7 +21,8 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                     slug
                   }
                   frontmatter {
-                    title
+                    title,
+                    template
                   }
                 }
               }
@@ -39,12 +39,13 @@ exports.createPages = ({graphql, boundActionCreators}) => {
           const posts = result.data.allMarkdownRemark.edges;
 
           _.each(posts, (post, index) => {
+            const templateName = post.node.frontmatter.template || 'left-title-top-border';
             const previous = index === posts.length - 1 ? false : posts[index + 1].node;
             const next = index === 0 ? false : posts[index - 1].node;
 
             createPage({
               path: post.node.fields.slug,
-              component: blogPost,
+              component: path.resolve(`./src/templates/${templateName}.js`),
               context: {
                 slug: post.node.fields.slug,
                 previous,

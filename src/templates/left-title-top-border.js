@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-export default class BlogPostTemplate extends React.Component {
+export default class LeftLitleTopBorderTemplate extends React.Component {
   static propTypes = {
     data: PropTypes.object,
   };
