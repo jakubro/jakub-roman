@@ -1,6 +1,6 @@
 ---
 title: Developer Privacy Policy
-type: post
+type: page
 template: left-title-top-border
 date: "2019-04-26T00:00:00.000Z"
 ---
